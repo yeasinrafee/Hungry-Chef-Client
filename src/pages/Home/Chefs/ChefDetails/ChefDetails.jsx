@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Recipes from "../Recipes/Recipes";
 
 const ChefDetails = () => {
   const chef = useLoaderData();
@@ -11,6 +12,7 @@ const ChefDetails = () => {
     numRecipes,
     likes,
     bio,
+    recipes,
   } = chef;
   return (
     <div>
@@ -42,6 +44,7 @@ const ChefDetails = () => {
           </div>
         </div>
       </div>
+      <Recipes recipes={recipes} />
     </div>
   );
 };
