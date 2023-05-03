@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { Link } from "react-router-dom";
 
 const Chefs = () => {
   const [chefs, setChefs] = useState([]);
@@ -40,9 +41,11 @@ const Chefs = () => {
                     <span>👍{chef.likes}</span>
                   </p>
                   <div className="card-actions justify-end">
-                    <button className="btn bg-red-400 border-none mt-3">
-                      View Recipes
-                    </button>
+                    <Link to={`/chefs/${chef.id}`}>
+                      <button className="btn bg-red-400 border-none mt-3">
+                        View Recipes
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
