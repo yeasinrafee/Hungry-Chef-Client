@@ -25,18 +25,18 @@ const Recipe = () => {
           Meet <span className="text-center text-red-400">{chefName}</span>
         </h1>
         <p className="text-lg w-full md:w-3/5 md:mx-auto">{bio}</p>
-        <div className="flex justify-center gap-20 mt-4">
-          <p className="text-lg">
-            Experiences:{" "}
+        <div className="flex flex-col md:flex-row justify-center gap-5 md:gap-20 my-5 md:my-9 items-center">
+          <p className="text-lg bg-red-50 px-9 py-8 rounded-2xl">
+            Experiences:
             <span className="text-red-400 font-bold">
               {yearsOfExperience} years
             </span>
           </p>
-          <p className="text-lg">
-            Recipes:{" "}
+          <p className="text-lg bg-red-50 px-9 py-8 rounded-2xl">
+            Recipes:
             <span className="text-red-400 font-bold">{numRecipes}</span>
           </p>
-          <p className="text-lg">
+          <p className="text-lg bg-red-50 px-9 py-8 rounded-2xl">
             Likes: <span className="text-red-400 font-bold">{likes}</span>
           </p>
         </div>
