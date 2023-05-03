@@ -9,7 +9,7 @@ const Pricing = () => {
       </h2>
       ;
       <div className="md:flex w-full md:w-3/4 md:mx-auto items-center justify-between mt-5 md:mt-20 mb-40">
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mb-5 md:mb-0">
           <div className="card-body items-center text-center">
             <p className="bg-red-300 px-7 py-1 rounded-2xl text-white">
               Regular
@@ -34,7 +34,7 @@ const Pricing = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mb-5 md:mb-5">
           <div className="card-body items-center text-center">
             <p className="bg-red-500 px-7 py-1 rounded-2xl text-white">
               Standard

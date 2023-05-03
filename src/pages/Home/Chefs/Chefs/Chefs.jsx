@@ -13,13 +13,14 @@ const Chefs = () => {
   console.log(chefs);
   return (
     <div className="p-4 md:p-8 md:mx-32">
-      <h1 className="text-center mb-20 text-red-400 font-bold text-4xl">
+      <hr />
+      <h1 className="text-center mb-20 text-red-400 font-bold text-4xl mt-10">
         Meet Our Chefs
       </h1>
       <div className="grid md:grid-cols-3 gap-10 md:w-3/4 md:mx-auto">
         {chefs &&
           chefs.map((chef) => (
-            <div key={chef.id}>
+            <div key={chef.id} className="mb-10">
               <div className="card w-96 bg-base-100 shadow-xl">
                 <figure>
                   <LazyLoadImage
