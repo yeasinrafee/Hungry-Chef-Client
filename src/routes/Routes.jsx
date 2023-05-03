@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Chefs from "../pages/Home/Chefs/Chefs/Chefs";
-import Recipe from "../pages/Recipe/Recipe";
+import ChefDetails from "../pages/Home/Chefs/ChefDetails/ChefDetails";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: `chefs/:id`,
-        element: <Recipe />,
+        element: <ChefDetails />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/chefs/${params.id}`),
       },
