@@ -27,6 +27,8 @@ const Chefs = () => {
                     className="w-full h-64 object-cover"
                     alt="Chefs"
                     effect="blur"
+                    delayTime={300}
+                    delayMethod="throttle"
                   />
                 </figure>
                 <div className="card-body">
