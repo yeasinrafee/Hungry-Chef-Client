@@ -10,29 +10,77 @@ const Pricing = () => {
       ;
       <div className="md:flex w-full md:w-3/4 md:mx-auto items-center justify-between mt-5 md:mt-20 mb-40">
         <div className="card w-96 bg-base-100 shadow-xl">
-          <div className="card-body">
-            <h2 className="card-title">Card title!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+          <div className="card-body items-center text-center">
+            <p className="bg-red-300 px-7 py-1 rounded-2xl text-white">
+              Regular
+            </p>
+            <h2 className="card-title font-bold text-5xl text-red-400 my-4">
+              $29.99
+            </h2>
+            <p>Get Our Regular price: </p>
+            <div className="text-left">
+              <ul>
+                <li>✅ Free Delivery</li>
+                <li>✅ Access All Recipes</li>
+                <li>✅ Download Recipes</li>
+                <li>❌ Contact with Chef</li>
+                <li>❌ 24 Hour Services</li>
+              </ul>
+            </div>
+            <div className="card-actions">
+              <button className="btn bg-red-400 border-none mt-4">
+                Buy Now
+              </button>
             </div>
           </div>
         </div>
         <div className="card w-96 bg-base-100 shadow-xl">
-          <div className="card-body">
-            <h2 className="card-title">Card title!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+          <div className="card-body items-center text-center">
+            <p className="bg-red-500 px-7 py-1 rounded-2xl text-white">
+              Standard
+            </p>
+            <h2 className="card-title font-bold text-5xl text-red-400 my-4">
+              $49.99
+            </h2>
+            <p>Get Our Regular price: </p>
+            <div className="text-left">
+              <ul>
+                <li>✅ Free Delivery</li>
+                <li>✅ Access All Recipes</li>
+                <li>✅ Download Recipes</li>
+                <li>✅ Contact with Chef</li>
+                <li>❌ 24 Hour Services</li>
+              </ul>
+            </div>
+            <div className="card-actions">
+              <button className="btn bg-red-400 border-none mt-4">
+                Buy Now
+              </button>
             </div>
           </div>
         </div>
         <div className="card w-96 bg-base-100 shadow-xl">
-          <div className="card-body">
-            <h2 className="card-title">Card title!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+          <div className="card-body items-center text-center">
+            <p className="bg-red-400 px-7 py-1 rounded-2xl text-white">
+              Regular
+            </p>
+            <h2 className="card-title font-bold text-5xl text-red-400 my-4">
+              $79.99
+            </h2>
+            <p>Get Our Regular price: </p>
+            <div className="text-left">
+              <ul>
+                <li>✅ Free Delivery</li>
+                <li>✅ Access All Recipes</li>
+                <li>✅ Download Recipes</li>
+                <li>✅ Contact with Chef</li>
+                <li>✅ 24 Hour Services</li>
+              </ul>
+            </div>
+            <div className="card-actions">
+              <button className="btn bg-red-400 border-none mt-4">
+                Buy Now
+              </button>
             </div>
           </div>
         </div>
