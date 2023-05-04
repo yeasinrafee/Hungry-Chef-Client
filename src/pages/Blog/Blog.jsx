@@ -3,9 +3,9 @@ import React from "react";
 const Blog = () => {
   return (
     <div className="w-full md:w-8/12 my-5 md:mx-auto px-3 md:px-0">
-      <h1 className="font-bold text-2xl my-5 text-center md:mb-16 text-red-400">
+      <h3 className="font-bold text-2xl my-5 text-center md:mb-16 text-red-400">
         Blog{" "}
-      </h1>
+      </h3>
       <hr className="mb-16" />
       <div className="px-5 mb-32">
         <h3 className="font-bold text-2xl mb-2">
