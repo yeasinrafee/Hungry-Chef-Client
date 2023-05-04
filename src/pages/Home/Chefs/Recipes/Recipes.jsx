@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import { toast } from "react-toastify";
 
 const Recipes = ({ recipes }) => {
-  console.log(recipes);
+  const [disabled, setDisabled] = useState(false);
+
+  const handleFavorite = () => {
+    setDisabled(true);
+    toast("Added to the favorites");
+  };
   return (
     <div className="p-4 md:p-8 md:mx-32 md:my-10">
       <h1 className="text-center text-3xl text-red-400 mb-4">
@@ -49,7 +55,11 @@ const Recipes = ({ recipes }) => {
                   />
                 </div>
                 <p>{recipe?.rating}</p>
-                <button className="btn bg-red-400 border-none">
+                <button
+                  onClick={handleFavorite}
+                  disabled={disabled}
+                  className="btn bg-red-400 border-none"
+                >
                   Add to Favorite
                 </button>
               </div>
@@ -62,4 +72,3 @@ const Recipes = ({ recipes }) => {
 };
 
 export default Recipes;
-<h1>Recipes</h1>;
