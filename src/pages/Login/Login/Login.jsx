@@ -8,7 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  const { logIn, googleSignIn } = useContext(AuthContext);
+  const { logIn, googleSignIn, githubSignIn } = useContext(AuthContext);
 
   const handleLogIn = (event) => {
     event.preventDefault();
@@ -41,6 +41,17 @@ const Login = () => {
         console.log(err);
       });
   };
+  const handleGithub = () => {
+    githubSignIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className="form-container">
       <h2 className="form-title mt-6">Please Login</h2>
@@ -63,7 +74,7 @@ const Login = () => {
           <FaGoogle className="text-4xl" />
           <span className="pr-4">Google</span>
         </button>
-        <button>
+        <button onClick={handleGithub}>
           <FaGithub className="text-4xl" />
           Github
         </button>
