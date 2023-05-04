@@ -24,7 +24,9 @@ const Navbar = () => {
       <div className="flex gap-6 md:gap-12 text-sm md:text-lg justify-center items-center">
         <Link to="/">Home</Link>
         <Link to="/blog">Blog</Link>
-        <Tippy content={user && user.email}>
+        <Tippy
+          content={user && user?.displayName ? user?.displayName : user?.email}
+        >
           <Link to="#">{user && <FaUserCircle className="text-3xl" />}</Link>
         </Tippy>
         {user ? (
