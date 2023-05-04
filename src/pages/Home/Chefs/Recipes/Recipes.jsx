@@ -17,8 +17,8 @@ const Recipes = ({ recipes }) => {
         Top 3 Recipes:{" "}
       </h1>
       <div className="md:flex justify-around md:mb-5">
-        {recipes.map((recipe) => (
-          <div className="card w-96 bg-base-100 shadow-xl ">
+        {recipes.map((recipe, i) => (
+          <div className="card w-96 bg-base-100 shadow-xl " key={i}>
             <div className="card-body relative">
               <h2 className="card-title text-2xl">{recipe.recipeName}</h2>
               <div className="">
@@ -28,7 +28,7 @@ const Recipes = ({ recipes }) => {
                   </h3>
                   <ul className="pl-3">
                     {recipe.ingredients.map((ingredient, i) => (
-                      <li>
+                      <li key={i}>
                         {i + 1}. {ingredient}
                       </li>
                     ))}
@@ -38,7 +38,7 @@ const Recipes = ({ recipes }) => {
                   <h3 className="font-bold text-red-400">Cooking Method: </h3>
                   <ul className="pl-2">
                     {recipe.cookingMethod.map((step, i) => (
-                      <li>
+                      <li key={i}>
                         {i + 1}. {step}
                       </li>
                     ))}
