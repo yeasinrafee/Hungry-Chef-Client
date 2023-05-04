@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 
 const Login = () => {
   const { logIn } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleLogIn = (event) => {
     event.preventDefault();
 
@@ -18,6 +19,7 @@ const Login = () => {
       .then((result) => {
         const loggedInUser = result.user;
         console.log(loggedInUser);
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);

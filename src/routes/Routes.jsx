@@ -5,6 +5,7 @@ import Chefs from "../pages/Home/Chefs/Chefs/Chefs";
 import ChefDetails from "../pages/Home/Chefs/ChefDetails/ChefDetails";
 import Login from "../pages/Login/Login/Login";
 import Registration from "../pages/Login/Registration/Registration";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
       },
       {
         path: `chefs/:id`,
-        element: <ChefDetails />,
+        element: (
+          <PrivateRoute>
+            <ChefDetails />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(
             `https://hungry-chef-server-yeasinrafee.vercel.app/chefs/${params.id}`
