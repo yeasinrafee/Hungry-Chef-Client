@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Registration.css";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const Registration = () => {
+  const { createUser } = useContext(AuthContext);
   const handleRegistration = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -12,7 +14,17 @@ const Registration = () => {
     const image = form.photo.value;
 
     console.log(email, password, name, image);
+
+    createUser(email, password)
+      .then((result) => {
+        const createdUser = result.user;
+        console.log(createdUser);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
+
   return (
     <div className="form-container">
       <h2 className="form-title mt-2">Registrar Now</h2>
