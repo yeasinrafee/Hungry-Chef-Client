@@ -1,17 +1,35 @@
 import React, { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { RotatingLines } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 
 const Chefs = () => {
   const [chefs, setChefs] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     fetch("https://hungry-chef-server-yeasinrafee.vercel.app/chefs")
       .then((res) => res.json())
-      .then((data) => setChefs(data))
+      .then((data) => {
+        setChefs(data);
+        setLoading(false);
+      })
       .catch((error) => console.error(error));
   }, []);
   console.log(chefs);
+  if (loading) {
+    return (
+      <div className="h-96 w-96 mx-auto my-60">
+        <RotatingLines
+          strokeColor="grey"
+          strokeWidth="5"
+          animationDuration="0.75"
+          width="96"
+          visible={true}
+        />
+      </div>
+    );
+  }
   return (
     <div className="p-4 md:p-8 md:mx-32">
       <hr />
