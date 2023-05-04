@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 import { FaBeer, FaUserCircle } from "react-icons/fa";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  console.log(user);
 
   const handleLogOut = () => {
     logOut()
@@ -21,7 +24,9 @@ const Navbar = () => {
       <div className="flex gap-6 md:gap-12 text-sm md:text-lg justify-center items-center">
         <Link to="/">Home</Link>
         <Link to="/blog">Blog</Link>
-        <Link to="#">{user && <FaUserCircle className="text-3xl" />}</Link>
+        <Tippy content={user && user.email}>
+          <Link to="#">{user && <FaUserCircle className="text-3xl" />}</Link>
+        </Tippy>
         {user ? (
           <button onClick={handleLogOut} className="btn bg-red-400 border-none">
             Logout
