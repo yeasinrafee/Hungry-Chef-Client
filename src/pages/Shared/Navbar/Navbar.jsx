@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div className=" text-center p-4 md:p-8 md:mx-32 md:flex justify-between">
       <Link>
@@ -12,7 +14,7 @@ const Navbar = () => {
       <div className="flex gap-6 md:gap-12 text-sm md:text-lg justify-center">
         <Link to="/">Home</Link>
         <Link to="/blog">Blog</Link>
-        <Link to="#">User</Link>
+        <Link to="#">{user && user.displayName}</Link>
       </div>
     </div>
   );
