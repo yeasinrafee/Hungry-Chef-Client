@@ -4,7 +4,13 @@ import { AuthContext } from "../../../provider/AuthProvider";
 import { FaBeer, FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((err) => console.log(err));
+  };
   return (
     <div className=" text-center p-4 md:p-8 md:mx-32 md:flex justify-between">
       <Link>
@@ -17,7 +23,9 @@ const Navbar = () => {
         <Link to="/blog">Blog</Link>
         <Link to="#">{user && <FaUserCircle className="text-3xl" />}</Link>
         {user ? (
-          <button className="btn bg-red-400 border-none">Logout</button>
+          <button onClick={handleLogOut} className="btn bg-red-400 border-none">
+            Logout
+          </button>
         ) : (
           <Link to="/login">
             <button className="btn bg-red-400 border-none">Login</button>
