@@ -1,6 +1,6 @@
 .form-container {
   width: 500px;
-  height: 600px;
+  height: 650px;
   margin: 20px auto;
   border: 1px solid #95a0a7;
   border-radius: 8px;
@@ -20,7 +20,7 @@
 }
 
 .form-control {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .form-control label {

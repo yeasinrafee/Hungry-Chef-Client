@@ -9,8 +9,9 @@ const Registration = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
+    const image = form.photo.value;
 
-    console.log(email, password, name);
+    console.log(email, password, name, image);
   };
   return (
     <div className="form-container">
@@ -28,11 +29,9 @@ const Registration = () => {
           <label htmlFor="password">Password</label>
           <input type="password" name="password" required />
         </div>
-        <div className="">
-          <label htmlFor="image" className="block mb-2 text-lg">
-            Image
-          </label>
-          <input type="file" name="image" />
+        <div className="form-control">
+          <label htmlFor="photo">Photo URL</label>
+          <input type="text" name="photo" required />
         </div>
         <input className="btn-submit" type="submit" value="Sign Up" />
       </form>
