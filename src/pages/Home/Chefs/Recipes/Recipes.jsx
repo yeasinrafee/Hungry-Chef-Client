@@ -1,4 +1,7 @@
 import React from "react";
+import { Rating } from "@smastrom/react-rating";
+
+import "@smastrom/react-rating/style.css";
 
 const Recipes = ({ recipes }) => {
   console.log(recipes);
@@ -10,7 +13,7 @@ const Recipes = ({ recipes }) => {
       <div className="md:flex justify-around md:mb-5">
         {recipes.map((recipe) => (
           <div className="card w-96 bg-base-100 shadow-xl ">
-            <div className="card-body">
+            <div className="card-body relative">
               <h2 className="card-title text-2xl">{recipe.recipeName}</h2>
               <div className="">
                 <div>
@@ -36,7 +39,16 @@ const Recipes = ({ recipes }) => {
                   </ul>
                 </div>
               </div>
-              <div className="card-actions justify-end">
+              <div className="card-actions justify-end absolute right-2 bottom-1 flex items-center gap-3">
+                <span>Ratings:</span>
+                <div className="">
+                  <Rating
+                    style={{ maxWidth: 100 }}
+                    value={Math.round(recipe?.rating)}
+                    readOnly
+                  />
+                </div>
+                <p>{recipe?.rating}</p>
                 <button className="btn bg-red-400 border-none">
                   Add to Favorite
                 </button>
