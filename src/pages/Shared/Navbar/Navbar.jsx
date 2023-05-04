@@ -33,7 +33,7 @@ const Navbar = () => {
         <Tippy
           content={user && user?.displayName ? user?.displayName : user?.email}
         >
-          <NavLink to="#">
+          <NavLink className="hover:text-red-600" to="#">
             {user && <FaUserCircle className="text-3xl" />}
           </NavLink>
         </Tippy>
