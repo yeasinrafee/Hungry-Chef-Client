@@ -32,7 +32,7 @@ const Login = () => {
       <p className="mt-5">
         <small>
           New to Hungry Chef?{" "}
-          <Link to="/signup" className="underline text-red-400">
+          <Link to="/register" className="underline text-red-400">
             Please register
           </Link>
         </small>
