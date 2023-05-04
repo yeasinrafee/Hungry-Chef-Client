@@ -3,6 +3,7 @@ import Main from "../layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Chefs from "../pages/Home/Chefs/Chefs/Chefs";
 import ChefDetails from "../pages/Home/Chefs/ChefDetails/ChefDetails";
+import Login from "../pages/Login/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
           fetch(
             `https://hungry-chef-server-yeasinrafee.vercel.app/chefs/${params.id}`
           ),
+      },
+      {
+        path: "login",
+        element: <Login />,
       },
     ],
   },
