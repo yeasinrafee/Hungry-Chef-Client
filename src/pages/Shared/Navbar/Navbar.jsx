@@ -30,13 +30,18 @@ const Navbar = () => {
         <NavLink className="hover:text-red-600" to="/blog">
           Blog
         </NavLink>
+
+        {/* Adding Tooltip on user Icon  */}
         <Tippy
           content={user && user?.displayName ? user?.displayName : user?.email}
         >
-          <NavLink className="hover:text-red-600" to="#">
-            {user && <FaUserCircle className="text-3xl" />}
-          </NavLink>
+          {user && (
+            <NavLink className="hover:text-red-600" to="#">
+              <FaUserCircle className="text-3xl" />
+            </NavLink>
+          )}
         </Tippy>
+
         {user ? (
           <button onClick={handleLogOut} className="btn bg-red-400 border-none">
             Logout
