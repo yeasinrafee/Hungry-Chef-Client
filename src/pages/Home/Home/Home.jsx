@@ -7,6 +7,7 @@ import Chefs from "../Chefs/Chefs/Chefs";
 const Home = () => {
   return (
     <div>
+      {/* Home Components  */}
       <Banner />
       <Chefs />
       <Pricing />

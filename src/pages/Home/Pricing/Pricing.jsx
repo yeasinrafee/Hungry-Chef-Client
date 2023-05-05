@@ -7,7 +7,8 @@ const Pricing = () => {
       <h2 className="text-center text-red-400 font-bold text-4xl mt-36">
         Get A Good Deal
       </h2>
-      ;
+
+      {/* Pricing Cards  */}
       <div className="md:flex w-full md:w-3/4 md:mx-auto items-center justify-between mt-5 md:mt-20 mb-40">
         <div className="card w-96 bg-base-100 shadow-xl mb-5 md:mb-0">
           <div className="card-body items-center text-center">

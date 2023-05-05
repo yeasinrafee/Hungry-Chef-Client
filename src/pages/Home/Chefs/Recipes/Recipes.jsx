@@ -17,6 +17,7 @@ const Recipes = ({ recipes }) => {
         Top 3 Recipes:{" "}
       </h1>
       <div className="md:flex justify-around md:mb-5">
+        {/* Recipe Cards  */}
         {recipes.map((recipe, i) => (
           <div className="card w-96 bg-base-100 shadow-xl " key={i}>
             <div className="card-body relative">

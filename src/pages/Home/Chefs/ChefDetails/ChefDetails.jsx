@@ -3,7 +3,9 @@ import { useLoaderData } from "react-router-dom";
 import Recipes from "../Recipes/Recipes";
 
 const ChefDetails = () => {
+  // Getting Chefs Data using Loader
   const chef = useLoaderData();
+
   const {
     id,
     chefPicture,
@@ -14,6 +16,7 @@ const ChefDetails = () => {
     bio,
     recipes,
   } = chef;
+
   return (
     <div>
       <div className="p-4 md:p-8 md:mx-32 text-center">
