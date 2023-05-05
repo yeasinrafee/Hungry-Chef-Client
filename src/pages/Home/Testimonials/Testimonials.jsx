@@ -5,7 +5,7 @@ const Testimonials = () => {
       id: 1,
       name: "John Doe",
       occupation: "Web Developer",
-      image: "./../../../../public/images/user1.jpg",
+      image: "./images/user1.jpg",
       quote:
         "I recently had the pleasure of dining at Chef Jane's restaurant, and I was blown away by the incredible flavors and textures in each dish. From the appetizers to the main course to the dessert, everything was simply superb. Chef Jane clearly has a passion for cooking and it shows in every bite. Highly recommend!",
     },
@@ -13,7 +13,7 @@ const Testimonials = () => {
       id: 2,
       name: "Jane Doe",
       occupation: "Graphic Designer",
-      image: "./../../../../public/images/user2.jpg",
+      image: "./images/user2.jpg",
       quote:
         "Chef John is an absolute genius in the kitchen. Every dish he creates is a masterpiece that delights the senses. His attention to detail is unmatched, and he takes great care in ensuring that each ingredient is perfectly prepared. If you have the opportunity to try Chef John's food, don't hesitate – you won't be disappointed!",
     },
@@ -21,7 +21,7 @@ const Testimonials = () => {
       id: 3,
       name: "Bob Smith",
       occupation: "Marketing Manager",
-      image: "./../../../../public/images/user3.jpg",
+      image: "./images/user3.jpg",
       quote:
         "Chef Bob is a true artist when it comes to food. His creativity knows no bounds, and he's constantly experimenting with new flavors and techniques to produce dishes that are truly unique. But it's not just about the creativity – Chef Bob's dishes are also incredibly delicious and satisfying. He's truly a master of his craft and I'm grateful for the opportunity to experience his culinary creations.",
     },

@@ -99,11 +99,11 @@ const Login = () => {
 
       <div className="flex justify-center gap-2 mt-9 items-center pr-8">
         <button onClick={handleGoogle}>
-          <img src="../../../../public/images/googleSignIn.png" alt="" />
+          <img src="./images/googleSignIn.png" alt="" />
         </button>
 
         <button onClick={handleGithub}>
-          <img src="../../../../public/images/GitHuhSignIn.png" alt="" />
+          <img src="./images/GitHuhSignIn.png" alt="" />
         </button>
       </div>
 
