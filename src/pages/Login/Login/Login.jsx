@@ -8,9 +8,12 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
+
   const from = location.state?.from?.pathname || "/";
+
   const { logIn, googleSignIn, githubSignIn } = useContext(AuthContext);
 
+  // Handle Login
   const handleLogIn = (event) => {
     event.preventDefault();
     setError("");
@@ -29,6 +32,7 @@ const Login = () => {
       return;
     }
 
+    // login authentication function
     logIn(email, password)
       .then((result) => {
         const loggedInUser = result.user;
@@ -41,6 +45,7 @@ const Login = () => {
       });
   };
 
+  // Handle Google Sign In
   const handleGoogle = () => {
     setError("");
     googleSignIn()
@@ -54,6 +59,8 @@ const Login = () => {
         setError(err.message);
       });
   };
+
+  //  Handle GitHub Sign In
   const handleGithub = () => {
     setError("");
     githubSignIn()
@@ -67,9 +74,11 @@ const Login = () => {
         setError(err.message);
       });
   };
+
   return (
     <div className="form-container">
       <h2 className="form-title mt-6">Please Login</h2>
+
       <form onSubmit={handleLogIn}>
         <div className="form-control">
           <label htmlFor="email">Email</label>
@@ -84,17 +93,20 @@ const Login = () => {
         </div>
         <input className="btn-submit" type="submit" value="Login" />
       </form>
+
+      {/* Error Text  */}
       <p className="text-error mt-3">{error}</p>
-      <div className="flex justify-center gap-10 mt-9 items-center pr-5">
+
+      <div className="flex justify-center gap-2 mt-9 items-center pr-8">
         <button onClick={handleGoogle}>
-          <FaGoogle className="text-4xl" />
-          <span className="pr-4">Google</span>
+          <img src="../../../../public/images/googleSignIn.png" alt="" />
         </button>
+
         <button onClick={handleGithub}>
-          <FaGithub className="text-4xl" />
-          Github
+          <img src="../../../../public/images/GitHuhSignIn.png" alt="" />
         </button>
       </div>
+
       <p className="mt-5">
         <small>
           New to Hungry Chef?{" "}

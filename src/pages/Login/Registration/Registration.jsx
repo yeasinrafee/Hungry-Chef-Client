@@ -6,6 +6,8 @@ import { AuthContext } from "../../../provider/AuthProvider";
 const Registration = () => {
   const { createUser } = useContext(AuthContext);
   const navigation = useNavigate();
+
+  // Handle Registration
   const handleRegistration = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -14,8 +16,7 @@ const Registration = () => {
     const password = form.password.value;
     const image = form.photo.value;
 
-    console.log(email, password, name, image);
-
+    // This Create User
     createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
