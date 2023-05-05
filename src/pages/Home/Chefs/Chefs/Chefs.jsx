@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 const Chefs = () => {
   const [chefs, setChefs] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  // Fetching Data from api of Chefs
   useEffect(() => {
     fetch("https://hungry-chef-server-yeasinrafee.vercel.app/chefs")
       .then((res) => res.json())
@@ -16,7 +18,7 @@ const Chefs = () => {
       })
       .catch((error) => console.error(error));
   }, []);
-  console.log(chefs);
+
   if (loading) {
     return (
       <div className="h-96 w-96 mx-auto my-60">

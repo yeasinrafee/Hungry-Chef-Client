@@ -11,7 +11,7 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || "/";
 
-  const { logIn, googleSignIn, githubSignIn } = useContext(AuthContext);
+  const { user, logIn, googleSignIn, githubSignIn } = useContext(AuthContext);
 
   // Handle Login
   const handleLogIn = (event) => {
@@ -23,12 +23,17 @@ const Login = () => {
     const password = form.password.value;
 
     // Password validation
-    if (email === "" || password === "") {
-      setError("All fields are required");
-      return;
-    } else if (password.length < 6) {
-      setError("Password must be at least 6 characters");
-      return;
+    if (user) {
+      setError("");
+      if (user.email !== email) {
+        setError("Email and password could not matched");
+      } else if (email === "" || password === "") {
+        setError("All fields are required");
+        return;
+      } else if (password.length < 6) {
+        setError("Password must be at least 6 characters");
+        return;
+      }
     }
 
     // login authentication function
@@ -40,7 +45,7 @@ const Login = () => {
       })
       .catch((err) => {
         console.log(err);
-        setError(err.message);
+        // setError(err.message);
       });
   };
 
