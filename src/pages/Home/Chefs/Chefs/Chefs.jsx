@@ -37,11 +37,11 @@ const Chefs = () => {
         Meet Our Chefs
       </h1>
       {/* Chef Cards  */}
-      <div className="grid md:grid-cols-3 gap-10 md:w-3/4 md:mx-auto">
+      <div className="grid md:grid-cols-3 gap-10 w-full md:w-3/4 md:mx-auto">
         {chefs &&
           chefs.map((chef) => (
-            <div key={chef.id} className="mb-10">
-              <div className="card w-96 bg-base-100 shadow-xl">
+            <div key={chef.id} className="mb-10 w-full">
+              <div className="card w-full bg-base-100 shadow-xl">
                 {/* LazyLoadingImage  */}
                 <figure>
                   <LazyLoadImage
