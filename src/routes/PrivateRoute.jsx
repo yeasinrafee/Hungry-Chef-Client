@@ -7,6 +7,7 @@ const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
 
+  // Loader for getting user
   if (loading) {
     return (
       <div className="h-96 w-96 mx-auto my-60">

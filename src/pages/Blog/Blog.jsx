@@ -17,6 +17,7 @@ const Blog = () => {
         )}
       </Pdf>
 
+      {/* ALL Blog Question Answers  */}
       <div ref={ref}>
         <h3 className="font-bold text-2xl my-5 text-center md:mb-16 text-red-400">
           Blog{" "}
