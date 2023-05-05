@@ -5,10 +5,9 @@ import "@smastrom/react-rating/style.css";
 import { toast } from "react-toastify";
 
 const Recipes = ({ recipes }) => {
-  const [disabled, setDisabled] = useState(false);
-
-  const handleFavorite = () => {
-    setDisabled(true);
+  const handleFavorite = (e) => {
+    // It'll Disable the button
+    e.target.disabled = true;
     toast("Added to the favorites");
   };
   return (
@@ -58,7 +57,6 @@ const Recipes = ({ recipes }) => {
                 <p>{recipe?.rating}</p>
                 <button
                   onClick={handleFavorite}
-                  disabled={disabled}
                   className="btn bg-red-400 border-none"
                 >
                   Add to Favorite
