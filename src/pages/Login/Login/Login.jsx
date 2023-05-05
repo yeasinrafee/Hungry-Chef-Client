@@ -22,8 +22,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(email, password);
-
+    // Password validation
     if (email === "" || password === "") {
       setError("All fields are required");
       return;
