@@ -17,7 +17,7 @@ const Recipes = ({ recipes }) => {
         Top 3 Recipes:{" "}
       </h1>
       <hr />
-      <div className="flex flex-col gap-7 md:gap-0 md:justify-around md:mb-5 mt-5">
+      <div className="flex flex-col md:flex-row gap-7 md:gap-0 md:justify-around md:mb-5 mt-5">
         {/* Recipe Cards  */}
         {recipes.map((recipe, i) => (
           <div className="card w-full md:w-96 bg-base-100 shadow-xl" key={i}>
