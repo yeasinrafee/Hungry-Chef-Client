@@ -38,17 +38,17 @@ const Testimonials = () => {
           <div className="mx-auto flex flex-col justify-center bg-red-50 px-10 rounded-md md:py-28">
             <img
               src={testimonials[0].image}
-              className="w-[100px] rounded-full h-[100px] mx-auto "
+              className="w-[70px] md:w-[100px] rounded-full h-[70px] md:h-[100px] mx-auto "
             />
-            <div className="md:px-32 md:mt-9">
-              <p className="italic mb-3">{`"${testimonials[0].quote}"`}</p>
+            <div className="md:px-32 md:mt-9 px-7 pt-5 md:pt-0">
+              <p className="italic mb-3 text-sm md:text-base">{`"${testimonials[0].quote}"`}</p>
               <h1 className="text-right text-red-400 font-bold italic">
                 {testimonials[0].name}
               </h1>
             </div>
           </div>
 
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-2 md:left-5 right-2 md:right-5 top-1/2">
             <a href="#slide3" className="btn btn-circle">
               ❮
             </a>
@@ -62,17 +62,17 @@ const Testimonials = () => {
           <div className="mx-auto flex flex-col justify-center bg-red-50 px-10 rounded-md md:py-24">
             <img
               src={testimonials[1].image}
-              className="w-[100px] rounded-full h-[100px] mx-auto"
+              className="w-[70px] md:w-[100px] rounded-full h-[70px] md:h-[100px] mx-auto "
             />
-            <div className="md:px-32 md:mt-9">
-              <p className="italic mb-3">{`"${testimonials[1].quote}"`}</p>
+            <div className="md:px-32 md:mt-9 px-7 pt-5 md:pt-0">
+              <p className="italic mb-3 text-sm md:text-base">{`"${testimonials[1].quote}"`}</p>
               <h1 className="text-right text-red-400 font-bold italic">
                 {testimonials[1].name}
               </h1>
             </div>
           </div>
 
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-2 md:left-5 right-2 md:right-5 top-1/2">
             <a href="#slide1" className="btn btn-circle">
               ❮
             </a>
@@ -86,17 +86,17 @@ const Testimonials = () => {
           <div className="mx-auto flex flex-col justify-center bg-red-50 px-10 rounded-md py-10 md:py-24">
             <img
               src={testimonials[2].image}
-              className="w-[100px] rounded-full h-[100px] mx-auto"
+              className="w-[70px] md:w-[100px] rounded-full h-[70px] md:h-[100px] mx-auto "
             />
-            <div className="md:px-32 md:mt-9">
-              <p className="italic mb-3">{`"${testimonials[2].quote}"`}</p>
+            <div className="md:px-32 md:mt-9 px-7 pt-5 md:pt-0">
+              <p className="italic mb-3 text-sm md:text-base">{`"${testimonials[2].quote}"`}</p>
               <h1 className="text-right text-red-400 font-bold italic">
                 {testimonials[2].name}
               </h1>
             </div>
           </div>
 
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-2 md:left-5 right-2 md:right-5 top-1/2">
             <a href="#slide2" className="btn btn-circle">
               ❮
             </a>
