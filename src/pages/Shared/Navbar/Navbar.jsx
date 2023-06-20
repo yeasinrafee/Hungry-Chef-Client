@@ -32,13 +32,14 @@ const Navbar = () => {
 
         {/* Adding Tooltip on user Icon  */}
         {user && (
-          <Tippy
-            content={
-              user && user?.displayName ? user?.displayName : user?.email
-            }
-          >
+          <Tippy content={user?.displayName || user?.email}>
             <NavLink className="hover:text-red-600" to="#">
-              <FaUserCircle className="text-3xl" />
+              {/* <FaUserCircle className="text-3xl" /> */}
+              <img
+                src={user?.photoURL}
+                alt=""
+                className="w-[35px] h-[35px] rounded-full"
+              />
             </NavLink>
           </Tippy>
         )}
