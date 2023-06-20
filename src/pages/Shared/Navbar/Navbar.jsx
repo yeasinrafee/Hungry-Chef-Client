@@ -22,7 +22,7 @@ const Navbar = () => {
           HungryChef
         </h1>
       </NavLink>
-      <nav className="flex gap-6 md:gap-12 text-sm md:text-lg justify-center items-center">
+      <nav className="flex gap-6 mt-7 md:mt-0 md:gap-12 text-sm md:text-lg justify-center items-center">
         <NavLink className="hover:text-red-600" to="/">
           Home
         </NavLink>
