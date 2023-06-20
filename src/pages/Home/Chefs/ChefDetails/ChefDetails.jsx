@@ -25,7 +25,7 @@ const ChefDetails = () => {
           alt="chef's Picture"
           className="w-full md:w-[900px] h-96 md:h-[700px] object-cover mx-auto"
         />
-        <div className="my-14">
+        <div className="mb-14 mt-28">
           <h1 className="text-3xl font-bold mb-3">
             Meet <span className="text-center text-red-400">{chefName}</span>
           </h1>

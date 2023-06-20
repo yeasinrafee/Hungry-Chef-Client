@@ -50,7 +50,9 @@ const Navbar = () => {
           </button>
         ) : (
           <NavLink to="/login">
-            <button className="btn bg-red-400 border-none">Login</button>
+            <button className="btn bg-red-400 border-none hover:bg-red-700">
+              Login
+            </button>
           </NavLink>
         )}
       </nav>

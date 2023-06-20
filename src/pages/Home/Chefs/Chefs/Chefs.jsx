@@ -65,7 +65,7 @@ const Chefs = () => {
                   </p>
                   <div className="card-actions justify-end">
                     <Link to={`/chefs/${chef.id}`}>
-                      <button className="btn bg-red-400 border-none mt-3">
+                      <button className="btn bg-red-400 border-none mt-3 hover:bg-red-700">
                         View Recipes
                       </button>
                     </Link>

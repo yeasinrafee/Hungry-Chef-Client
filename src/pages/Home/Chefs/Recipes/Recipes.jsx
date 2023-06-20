@@ -57,7 +57,7 @@ const Recipes = ({ recipes }) => {
                 <p>{recipe?.rating}</p>
                 <button
                   onClick={handleFavorite}
-                  className="btn bg-red-400 border-none"
+                  className="btn bg-red-400 border-none hover:bg-red-700"
                 >
                   Add to Favorite
                 </button>
