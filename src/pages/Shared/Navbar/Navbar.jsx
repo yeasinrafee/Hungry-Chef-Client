@@ -38,7 +38,6 @@ const Navbar = () => {
             }
           >
             <NavLink className="hover:text-red-600" to="#">
-              {/* {user && <FaUserCircle className="text-3xl" />} */}
               <FaUserCircle className="text-3xl" />
             </NavLink>
           </Tippy>

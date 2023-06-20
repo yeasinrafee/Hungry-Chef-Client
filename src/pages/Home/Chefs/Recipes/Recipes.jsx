@@ -12,16 +12,18 @@ const Recipes = ({ recipes }) => {
   };
   return (
     <div className="p-4 md:p-8 md:mx-32 md:my-10">
-      <h1 className="text-center text-3xl text-red-400 mb-4">
+      <hr />
+      <h1 className="text-center text-3xl text-red-400 mb-4 py-3 ">
         Top 3 Recipes:{" "}
       </h1>
-      <div className="md:flex justify-around md:mb-5">
+      <hr />
+      <div className="flex flex-col gap-7 md:gap-0 md:justify-around md:mb-5 mt-5">
         {/* Recipe Cards  */}
         {recipes.map((recipe, i) => (
-          <div className="card w-96 bg-base-100 shadow-xl " key={i}>
+          <div className="card w-full md:w-96 bg-base-100 shadow-xl" key={i}>
             <div className="card-body relative">
               <h2 className="card-title text-2xl">{recipe.recipeName}</h2>
-              <div className="">
+              <div className="mb-7">
                 <div>
                   <h3 className="text-lg text-red-400">
                     List of ingredients:{" "}
@@ -45,7 +47,7 @@ const Recipes = ({ recipes }) => {
                   </ul>
                 </div>
               </div>
-              <div className="card-actions justify-end absolute right-2 bottom-1 flex items-center gap-3">
+              <div className="card-actions justify-end absolute right-2 bottom-1 flex items-center md:gap-3 mb-5 md:pl-2 md:pr-3">
                 <span>Ratings:</span>
                 <div className="">
                   <Rating
@@ -59,7 +61,7 @@ const Recipes = ({ recipes }) => {
                   onClick={handleFavorite}
                   className="btn bg-red-400 border-none hover:bg-red-700"
                 >
-                  Add to Favorite
+                  Add Favorite
                 </button>
               </div>
             </div>
