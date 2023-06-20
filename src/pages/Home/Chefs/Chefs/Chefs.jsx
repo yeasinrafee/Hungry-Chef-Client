@@ -21,12 +21,12 @@ const Chefs = () => {
 
   if (loading) {
     return (
-      <div className="h-96 w-96 mx-auto my-60">
+      <div className="w-1/2 ml-40 md:mx-auto my-60">
         <RotatingLines
           strokeColor="grey"
           strokeWidth="5"
           animationDuration="0.75"
-          width="96"
+          width="56"
           visible={true}
         />
       </div>
