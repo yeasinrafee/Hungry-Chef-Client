@@ -103,11 +103,11 @@ const Login = () => {
 
       <div className="flex justify-center gap-2 mt-9 items-center pr-8">
         <button onClick={handleGoogle}>
-          <img src="./images/googleSignIn.png" alt="" />
+          <img src="./images/googleSignIn.webp" alt="" />
         </button>
 
         <button onClick={handleGithub}>
-          <img src="./images/GitHuhSignIn.png" alt="" />
+          <img src="./images/GitHuhSignIn.webp" alt="" />
         </button>
       </div>
 
