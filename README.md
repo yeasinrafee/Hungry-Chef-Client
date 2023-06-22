@@ -1,9 +1,3 @@
-# b7a10-chef-recipe-hunter-client-side-yeasinrafee
-b7a10-chef-recipe-hunter-client-side-yeasinrafee created by GitHub Classroom
-
-# b7a10-chef-recipe-hunter-server-side-yeasinrafee
-b7a10-chef-recipe-hunter-server-side-yeasinrafee created by GitHub Classroom
-
 ## Complete Project
 
 Github Repo (Client) -> [GetAJob-github](https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-yeasinrafee) </br>
